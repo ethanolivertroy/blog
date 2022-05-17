@@ -3,6 +3,8 @@
 Here's a simple way to compare lists of IP addresses in python
 You might for example want to compare a baseline inventory list to a routine Nessus scan to ensure all machines are logged in the inventory
 
+%[https://github.com/ethanolivertroy/compare-lists]
+
 # Code:
 ```
 import difflib

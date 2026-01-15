@@ -9,7 +9,7 @@ export default function Home() {
       <header className="mb-16 flex items-center justify-between">
         <h1 className="text-2xl font-bold tracking-tight">Blog</h1>
         <a
-          href="https://x.com/ethanolivertroy"
+          href="https://x.com/YOUR_USERNAME"
           target="_blank"
           rel="noopener noreferrer"
           className="text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"

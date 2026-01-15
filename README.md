@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# rauchg-blog-template
 
-## Getting Started
+A minimalist blog template inspired by [rauchg's blog](https://rauchg.com). Built with Next.js 16, MDX, Tailwind CSS, and Geist font.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 16** - App Router with Turbopack
+- **MDX** - Write posts in Markdown with React components
+- **Tailwind CSS** - Utility-first styling
+- **Geist Font** - Clean typography from Vercel
+- **Dark Mode** - Automatic theme switching
+- **TypeScript** - Full type safety
+- **Vercel Ready** - One-click deploy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Click "Use this template" on GitHub
+2. Clone your new repo
+3. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+4. Start the dev server:
+   ```bash
+   pnpm dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding Posts
 
-## Learn More
+1. Create a folder in `app/(post)/your-post-slug/`
+2. Add a `page.mdx` file:
+   ```mdx
+   # Your Post Title
 
-To learn more about Next.js, take a look at the following resources:
+   Your content here...
+   ```
+3. Update `app/posts.json`:
+   ```json
+   [
+     {
+       "id": "your-post-slug",
+       "date": "Jan 1, 2025",
+       "title": "Your Post Title"
+     }
+   ]
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Site title**: Edit `app/layout.tsx`
+- **Social links**: Edit `app/page.tsx` (X/Twitter link)
+- **Styles**: Edit `app/globals.css`
+- **MDX components**: Edit `mdx-components.tsx`
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ethanolivertroy/rauchg-blog-template)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Or connect your GitHub repo to [Vercel](https://vercel.com) for automatic deployments.
+
+## Credits
+
+Inspired by [rauchg/blog](https://github.com/rauchg/blog) by Guillermo Rauch (CEO of Vercel).
+
+## License
+
+MIT

@@ -17,6 +17,9 @@ importers:
       '@next/mdx':
         specifier: ^16.1.1
         version: 16.1.1(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.8)(react@19.2.3))
+      '@sanity/image-url':
+        specifier: ^2.0.3
+        version: 2.0.3
       geist:
         specifier: ^1.5.1
         version: 1.5.1(next@16.1.5(@babel/core@7.29.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))

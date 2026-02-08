@@ -1,6 +1,7 @@
 import { PortableText, type PortableTextComponents } from "next-sanity";
 import type { PortableTextBlock } from "next-sanity";
 import Link from "next/link";
+import { urlFor } from "@/sanity/image";
 
 const components: PortableTextComponents = {
   block: {
@@ -57,6 +58,16 @@ const components: PortableTextComponents = {
       <code className="bg-zinc-100 dark:bg-zinc-800 rounded px-1.5 py-0.5 text-sm font-mono">
         {children}
       </code>
+    ),
+  },
+  types: {
+    image: ({ value }) => (
+      <img
+        src={urlFor(value).width(800).auto("format").url()}
+        alt={value.alt || ""}
+        className="rounded-lg my-6 w-full"
+        loading="lazy"
+      />
     ),
   },
 };

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <header className="mb-16 flex items-center justify-between">
-        <h1 className="text-2xl font-bold tracking-tight">Blog</h1>
+        <h1 className="text-2xl font-bold tracking-tight">ETgoHOME</h1>
         <a
           href="https://x.com/YOUR_USERNAME"
           target="_blank"

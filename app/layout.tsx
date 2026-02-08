@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="antialiased min-h-screen bg-white dark:bg-zinc-950">
-        <main className="max-w-2xl mx-auto px-6 py-16">{children}</main>
+        {children}
       </body>
     </html>
   );

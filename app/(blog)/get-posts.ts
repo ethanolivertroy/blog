@@ -1,15 +1,11 @@
-import posts from "./posts.json";
+import { client } from "@/sanity/client"
+import { postsQuery, postBySlugQuery } from "@/sanity/queries"
+import type { PostSummary, Post } from "@/sanity/types"
 
-export interface Post {
-  id: string;
-  date: string;
-  title: string;
+export async function getPosts(): Promise<PostSummary[]> {
+  return client.fetch(postsQuery)
 }
 
-export function getPosts(): Post[] {
-  return posts;
-}
-
-export function getPost(id: string): Post | undefined {
-  return posts.find((post) => post.id === id);
+export async function getPost(slug: string): Promise<Post | null> {
+  return client.fetch(postBySlugQuery, { slug })
 }

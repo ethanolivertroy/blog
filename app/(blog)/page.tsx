@@ -1,15 +1,23 @@
 import Link from "next/link";
 import { getPosts } from "./get-posts";
 
-export default function Home() {
-  const posts = getPosts();
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
+export default async function Home() {
+  const posts = await getPosts();
 
   return (
     <div>
       <header className="mb-16 flex items-center justify-between">
-        <h1 className="text-2xl font-bold tracking-tight">Blog</h1>
+        <h1 className="text-2xl font-bold tracking-tight">ETgoHOME</h1>
         <a
-          href="https://x.com/ethanolivertroy"
+          href="https://x.com/YOUR_USERNAME"
           target="_blank"
           rel="noopener noreferrer"
           className="text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
@@ -29,16 +37,16 @@ export default function Home() {
 
       <ul className="space-y-4">
         {posts.map((post) => (
-          <li key={post.id}>
+          <li key={post.slug}>
             <Link
-              href={`/${post.id}`}
+              href={`/${post.slug}`}
               className="flex flex-col sm:flex-row sm:items-center sm:justify-between group"
             >
               <span className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {post.title}
               </span>
               <span className="text-sm text-zinc-500 dark:text-zinc-400">
-                {post.date}
+                {post.publishedAt ? formatDate(post.publishedAt) : ""}
               </span>
             </Link>
           </li>
